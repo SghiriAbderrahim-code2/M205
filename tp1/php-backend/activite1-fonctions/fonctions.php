@@ -26,19 +26,21 @@ function diviser($a, $b)
 function estPair($n)
 {
     if ($n % 2 == 0) {
-        return true;
+        $p = true;
     } else {
-        return false;
+        $p = false;
     }
+    return $p;
 }
 
 function estPositif($n)
 {
     if ($n > 0) {
-        return true;
+        $p = true;
     } else {
-        return false;
+        $p = false;
     }
+    return $p;
 }
 
 function maximum($a, $b, $c)
@@ -55,15 +57,16 @@ function maximum($a, $b, $c)
 
 function estPremier($n)
 {
+    $p=true;
     if ($n < 2) {
-        return false;
+        $p = false;
     }
     for ($i = 2; $i < $n; $i++) {
         if ($n % $i == 0) {
-            return false;
+            $p = false;
         }
     }
-    return true;
+    return $p;
 }
 
 function calculerTTC($ht, $tva = 20)
